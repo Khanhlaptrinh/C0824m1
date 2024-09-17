@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    label input {
+        margin-bottom: 20px;
+    }
+    .nhap {
+        /* Ẩn nút radio mặc định */
+        input[type="radio"] {
+            display: none;
+        }
+
+        /* Tạo kiểu cho lớp radio-container */
+        .radio-container {
+            display: inline-block;
+            position: relative;
+            padding-left: 30px;
+            margin-right: 10px;
+            cursor: pointer;
+            font-size: 18px;
+            user-select: none;
+        }
+
+        /* Tạo vòng tròn tùy chỉnh cho nút radio */
+        .checkmark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 20px;
+            width: 20px;
+            background-color: #fff;
+            border-radius: 50%;
+            border: 1px solid #ccc;
+        }
+
+        /* Hiệu ứng khi chọn nút radio */
+        .radio-container input:checked ~ .checkmark {
+            background-color: #2196F3;
+            border-color: #2196F3;
+        }
+
+        /* Vòng tròn nhỏ bên trong khi được chọn */
+        .radio-container .checkmark:after {
+            content: "";
+            position: absolute;
+            display: none;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: white;
+        }
+
+        /* Hiển thị vòng tròn nhỏ khi nút được chọn */
+        .radio-container input:checked ~ .checkmark:after {
+            display: block;
+        }
+    }
+</style>
+<body>
+    <form action="Registersimple.html" method="get">
+        <label for="name">Họ và tên: <br/>
+            <input type="text" name="name"/><br/>
+        </label>
+        <label for="email">Email: <br/>
+            <input type="text" name="email"/> <br/>
+        </label>
+        <label for="phone">Số điện thoại: <br/>
+            <input type="number" name="phone"/>
+        </label>
+    </form>
+    <form class="nhap" action="Registersimple.html" method="get">
+        <p>Giới tính:</p>
+        <label class="radio-container">Nam
+            <input type="radio" name="gioitinh" value="1" checked>
+            <span class="checkmark"></span>
+        </label>
+        <label class="radio-container">Nữ
+            <input type="radio" name="gioitinh" value="0">
+            <span class="checkmark"></span>
+        </label>
+    </form>
+
+
+    <form action="Registersimple.html" method="get" style="margin-top: 20px">
+        <button type="button">Đăng Ký</button>
+    </form>
+</body>
+</html>
