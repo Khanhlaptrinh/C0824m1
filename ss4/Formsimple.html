@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Form Layout</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #cecece;
+            margin: 0;
+        }
+        h2 {
+            background-color: orange;
+            color: white;
+            text-align: center;
+        }
+        .container {
+            background-color: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .form-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        p {
+            font-size: 16px;
+            width: 100px;
+            color: blue;
+        }
+        input[type="text"] {
+            flex: 1;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            background-color: #f5f5f5;
+        }
+        .btn {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            padding-top: 30px;
+        }
+        .hobbies {
+            display: flex;
+        }
+        .options {
+            display: grid;
+            grid-template-columns: repeat(3, auto);
+            gap: 10px 30px;
+            padding-top: 15px;
+        }
+        label {
+            color: orange;
+            font-size: 14px;
+        }
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Sở thích của bạn</h2>
+        <form action="">
+            <div class="form-group">
+                <p>Họ và tên</p>
+                <input type="text" id="fname" name="fname" />
+            </div>
+
+            <div class="form-group">
+                <p>Email</p>
+                <input style="width: 100px" type="text" id="email" name="email" />
+            </div>
+        </form>
+        <div class="hobbies">
+            <p>Sở thích</p>
+            <div class="options">
+                <label><input type="checkbox">Thể thao</label>
+                <label><input type="checkbox">Âm nhạc</label>
+                <label><input type="checkbox">Đọc sách</label>
+                <label><input type="checkbox">Lướt web</label>
+                <label><input type="checkbox">Chơi game</label>
+                <label><input type="checkbox">Điện ảnh</label>
+                <label><input type="checkbox">Du lịch</label>
+            </div>
+        </div>
+        <div class="btn">
+            <button type="submit">Gui thong tin</button>
+            <button type="reset">Nhap lai</button>
+        </div>
+    </div>
+</body>
+</html>
