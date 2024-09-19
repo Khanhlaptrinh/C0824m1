@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    body {
+        font-family: "Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
+        font-size: small;
+        padding: 0;
+        margin: 0;
+    }
+    h2, p {
+        margin-left: 30px;
+    }
+    .container, ul li{
+        list-style-type: none;
+    }
+    .container, ul li, input {
+        margin-top: 15px;
+    }
+    #note {
+        margin-top: 15px;
+        height: 30px;
+    }
+    .price-input {
+        margin-bottom: 10px;
+    }
+    .input-group {
+        display: flex;
+        align-items: center;
+    }
+    .currency-symbol, .dot {
+        font-size: 1.5em;
+    }
+    .input-box {
+        width: 50px;
+        padding: 5px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    .input-box.dollars{
+        width: 70px;
+    }
+    .input-box.cents{
+        width: 40px;
+    }
+    #bang {
+        margin-top: 20px;
+        width: 100%;
+        border-collapse: collapse;
+    }
+    #bang, th {
+        height: 50px;
+        text-align: left;
+    }
+    .row, th, td {
+        padding-left: 10px;
+    }
+    #bang, th, td {
+        border: 1px solid black;
+    }
+    th, td {
+        padding: 10px;
+        text-align: left;
+    }
+    .btn button{
+        background-color: #2196F3;
+        color: white;
+        font-size: 16px;
+        border-radius: 5px;
+    }
+</style>
+<body>
+    <div class="container">
+        <h2>Market Research Survey</h2>
+        <p>Please take a few moments to complete this satisfaction survey.</p>
+        <hr>
+        <ul>
+            <li>
+                <label>What is your age range?</label>
+                <div>
+                    <select style="margin-top: 10px">
+                        <option>18-24</option>
+                        <option value="number">25-34</option>
+                        <option value="number">34-50</option>
+                        <option value="number">50</option>
+                    </select>
+                </div>
+            </li>
+            <li>
+                <label>What is your yearly income range?</label>
+                <div>
+                    <select style="margin-top: 10px">
+                        <option>$0 - $25,000</option>
+                        <option value="number">$25,000 - $50,001</option>
+                        <option value="number">$50,001 - $100,000</option>
+                        <option value="number">$100,000</option>
+                    </select>
+                </div>
+            </li>
+            <li>
+                <label>Gender Identity</label>
+                <div class="Gender">
+                    <input type="radio" name="nam" id="male" /><span>Male</span><br>
+                    <input type="radio" name="nu" id="Female" /><span>Female</span>
+                </div>
+            </li>
+            <li>
+                <label>Which of the following products have your purchased in the last 2 months. Please check all that apply.</label>
+                <div class="product">
+                    <input type="checkbox" name="sanpham" id="product1" /><span>Productt 1</span><br>
+                    <input type="checkbox" name="sanpham" id="product2" /><span>Productt 2</span><br>
+                    <input type="checkbox" name="sanpham" id="product3" /><span>Productt 3</span><br>
+                </div>
+            </li>
+            <li>
+                <label>How often would you use our new product?</label>
+                <div class="day">
+                    <input type="radio" name="daily" id="daily" /><span>Daily</span><br>
+                    <input type="radio" name="weekly" id="weekly" /><span>Weekly</span><br>
+                    <input type="radio" name="monthly" id="monthly" /><span>Monthly</span><br>
+                </div>
+            </li>
+            <li>
+                <div class="price-input">
+                    <label for="dollars">What would you pay for the new product?</label>
+                    <div class="input-group">
+                        <div class="currency-symbol">$</div>
+                        <input id="dollars" type="text" class="input-box dollars">
+                        <div class="dot">.</div>
+                        <input id="cents" type="text" class="input-box cents">
+                    </div>
+                </div>
+
+            </li>
+            <li>
+                <label>What features would you like to see in the new product.</label>
+                <div class="note">
+                    <textarea name="note" id="note" cols="30" rows="10"></textarea>
+                </div>
+            </li>
+            <li>
+                <label>Please rate your level of agreement with the following statements.</label>
+                <table id="bang">
+                    <thead>
+                    <tr style="background-color: #b3bfdf">
+                        <th>&nbsp;</th>
+                        <th>Strongly Disagree</th>
+                        <th>Disagree</th>
+                        <th>Agree</th>
+                        <th>Strongly Agree</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="row">
+                        <th>Our products are priced fairly.</th>
+                        <td>
+                            <input type="radio" name="number" class="number1" /><br>
+                            <span style="padding-left: 7px">1</span>
+                        </td>
+                        <td>
+                            <input type="radio" name="number" class="number2" /><br>
+                            <span style="padding-left: 7px">2</span>
+                        </td>
+                        <td>
+                            <input type="radio" name="number" Class="number3" /><br>
+                            <span style="padding-left: 7px">3</span>
+                        </td>
+                        <td>
+                            <input type="radio" name="number" class="number4" /><br>
+                            <span style="padding-left: 7px">4</span>
+                        </td>
+                    </tr>
+                    <tr class="row" style="background-color: #b3bfdf">
+                        <th>Our products are high quality.</th>
+                        <td>
+                            <input type="radio" name="number" class="number1" /><br>
+                            <span style="padding-left: 7px">1</span>
+                        </td>
+                        <td>
+                            <input type="radio" name="number" class="number2" /><br>
+                            <span style="padding-left: 7px">2</span>
+                        </td>
+                        <td>
+                            <input type="radio" name="number" Class="number3" /><br>
+                            <span style="padding-left: 7px">3</span>
+                        </td>
+                        <td>
+                            <input type="radio" name="number" class="number4" /><br>
+                            <span style="padding-left: 7px">4</span>
+                        </td>
+                    </tr>
+                    <tr class="row">
+                        <th>You would recommend our product to a friend or coworker.</th>
+                        <td>
+                            <input type="radio" name="number" class="number1" /><br>
+                            <span style="padding-left: 7px">1</span>
+                        </td>
+                        <td>
+                            <input type="radio" name="number" class="number2" /><br>
+                            <span style="padding-left: 7px">2</span>
+                        </td>
+                        <td>
+                            <input type="radio" name="number" Class="number3" /><br>
+                            <span style="padding-left: 7px">3</span>
+                        </td>
+                        <td>
+                            <input type="radio" name="number" class="number4" /><br>
+                            <span style="padding-left: 7px">4</span>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </li>
+            <li class="btn">
+                <button type="submit">Submit</button>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
