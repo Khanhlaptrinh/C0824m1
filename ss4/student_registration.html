@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    body {
+      font-family: "Lucida Grande", "Lucida Sans Unicode", Tahoma, sans-serif;
+      display: flex;
+      height: 100vh;
+      align-items: center;
+      justify-content: center;
+      background-color: #cecece;
+      margin: 0;
+    }
+    .container {
+      background-color: rgba(244, 207, 92, 0.72);
+      padding: 5px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+      color: blue;
+      background-color: #b3bfdf;
+    }
+    .registration {
+      margin-right: 30px;
+      margin-top: 30px;
+    }
+    table, tr, td, input {
+      padding-right: 50px;
+      border-radius: 1px;
+    }
+    table, tr, td {
+      color: #2196F3;
+    }
+    #class option{
+      background-color: #2196F3;
+    }
+    #content {
+      display: inline-block;
+      height: 50px;
+      border: 2px outset #110e0e;
+    }
+    #class {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      background-color: white;
+      border: 2px outset #110e0e;
+
+      padding: 5px 30px;
+      font-size: 14px;
+      border-radius: 5px;
+      width: 150px;
+      height: 30px;
+      background-image: url('data:image/svg+xml,%3Csvg xmlns%3D"http%3A//www.w3.org/2000/svg" viewBox%3D"0 0 24 24" width%3D"24" height%3D"24"%3E%3Cpath fill%3D"%23000000" d%3D"M7 10l5 5 5-5z"/%3E%3C/svg%3E');
+      background-repeat: no-repeat;
+      background-position: right 10px center;
+      background-size: 12px;
+    }
+    #class:focus {
+      border-color: #007bff;
+      outline: none;
+    }
+    .btn {
+      margin-right: 10px;
+      margin-left: 136px;
+    }
+    .btn button {
+      border-left: 2px outset #110e0e;
+    }
+</style>
+<body>
+    <div class="container">
+      <h2>ĐĂNG KÝ HỌC VIÊN</h2>
+      <div class="registration">
+        <form method="post" action="url">
+          <table>
+            <tr>
+              <td>Họ và tên</td>
+              <td>
+                <input type="text" name="name" id="name">
+              </td>
+            </tr>
+            <tr>
+              <td>Ngày sinh</td>
+              <td>
+                <input type="datetime" name="date" id="date">
+              </td>
+            </tr>
+            <tr>
+              <td>Giới tính</td>
+              <td>
+                <input type="radio" value="" name="sex"/><span style="color: #110e0e">Nam</span>
+                <input type="radio" value="" name="sex"/><span style="color: #110e0e">Nữ</span>
+              </td>
+            </tr>
+            <tr>
+              <td>Địa chỉ</td>
+              <td>
+                <textarea cols="30" rows="10" name="content" id="content"></textarea>
+              </td>
+            </tr>
+            <tr>
+              <td>Lớp</td>
+              <td>
+                <select name="class" id="class">
+                  <option>-- Lớp --</option>
+                  <option>Lớp 1</option>
+                  <option>Lớp 2</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td>Email</td>
+              <td>
+                <input type="email" name="email" id="email">
+              </td>
+            </tr>
+            <tr>
+              <td>Điện thoại</td>
+              <td>
+                <input type="tel" name="phone" id="phone">
+              </td>
+            </tr>
+          </table>
+        </form>
+      </div>
+      <div class="btn">
+        <button type="submit">Đăng ký</button>
+        <button type="reset">Nhập lại</button>
+      </div>
+    </div>
+</body>
+</html>
